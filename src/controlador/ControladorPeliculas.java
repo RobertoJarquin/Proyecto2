@@ -23,7 +23,7 @@ import javax.swing.*;
  */
 public class ControladorPeliculas {
     private ArrayList<Pelicula> peliculas;
-
+    
     public ControladorPeliculas() {
         peliculas = new ArrayList();
     }
