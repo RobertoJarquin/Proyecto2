@@ -885,9 +885,11 @@ public class Prueba extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
-        // TODO add your handling code here:
-        indice ++;
-
+    if (indice == peliculas.size() - 1) {
+        indice = 0; //
+    } else {
+        indice++;
+    }
         Pelicula actual = peliculas.get(indice);
         String datos = "-Title: "+ actual.getNombre() + "\n";
         String descripcion = actual.getDescripcion()+ "\n";
@@ -905,9 +907,11 @@ public class Prueba extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSiguienteActionPerformed
 
     private void anteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anteriorActionPerformed
-        // TODO add your handling code here:
-        indice --;
-
+       if (indice == 0) {
+        indice = peliculas.size() - 1; // 
+    } else {
+        indice--;
+    }
         Pelicula actual = peliculas.get(indice);
         String datos = "-Title: " + actual.getNombre() + "\n";
         String descripcion = actual.getDescripcion()+ "\n";
